@@ -20,22 +20,25 @@ public class TodaysSales {
 	}
 
 	public static void main(String[] args) {
+		
 		// how many sales?
-		long saleCount = saleStream().count();
-		System.out.println("Count of sales: " + saleCount);
+//		long saleCount = saleStream().count();
+//		System.out.println("Count of sales: " + saleCount);
+		
 //
-//		// any sales over $100?
-//		Supplier<DoubleStream> totalStream = () -> saleStream().mapToDouble(Sale::total);
+		// any sales over $100?
+		Supplier<DoubleStream> totalStream = () -> saleStream().mapToDouble(Sale::total);
+		
 //		boolean bigSaleDay = totalStream.get().anyMatch(total -> total > 100.00);
 //		System.out.println("Big sale day? " + bigSaleDay);
-//
+////
 //		// maximum sale amount?
 //		DoubleSummaryStatistics stats = totalStream.get().summaryStatistics();
 //		System.out.println("Max sale amount: " + stats.getMax());
 //		System.out.println("Stats on total: " + stats);
-//
+////
 //		// how many items were sold today?
-//		Supplier<Stream<Item>> itemStream = () -> saleStream().flatMap(sale -> sale.items.stream());
+		Supplier<Stream<Item>> itemStream = () -> saleStream().flatMap(sale -> sale.items.stream());
 //		long itemCount = itemStream.get().count();
 //		System.out.println("Count of items: " + itemCount);
 //
@@ -44,12 +47,12 @@ public class TodaysSales {
 //		System.out.println("Distinct items: " + uniqueItems);
 //
 //		// summarize sales by store
-//		ConcurrentMap<String, DoubleSummaryStatistics> summary = saleStream().parallel()
-//				.collect(Collectors.groupingByConcurrent(sale -> Thread.currentThread().getName(),
-//						Collectors.summarizingDouble(Sale::total)));
-//		System.out.println("Summary by thread: " + summary);
-//		summary.keySet().stream().sorted()
-//				.forEach(store -> System.out.println(store + " stats: " + summary.get(store)));
+		ConcurrentMap<String, DoubleSummaryStatistics> summary = saleStream().parallel()
+				.collect(Collectors.groupingByConcurrent(sale -> Thread.currentThread().getName(),
+						Collectors.summarizingDouble(Sale::total)));
+		System.out.println("Summary by thread: " + summary);
+		summary.keySet().stream().sorted()
+				.forEach(store -> System.out.println(store + " stats: " + summary.get(store)));
 
 	}
 
