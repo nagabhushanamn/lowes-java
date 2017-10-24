@@ -1,0 +1,49 @@
+
+
+  Model
+  -------
+  
+   a. Account
+   
+       - num
+       - balance
+       - status
+       
+    ------------------------------------------
+    
+    Layer(s)
+    
+    - service   ( processing-logic model )     
+    - data/repository ( persisting logic for model )
+    
+        datasource: Relational Database
+        
+        java- data-access technologies
+        
+        		- JDBC
+        		- JPA 
+        		- Hibernate
+        		- Toplink
+        		- EclipseLink
+        		- JDO
+        		- etc..
+        		
+    
+    -------------------------------------------
+    
+    F.W  ==> Spring
+    
+    
+    how to configure the Spring F.W ?
+    
+    --> XML
+    --> Annotations
+    --> JavaConfig  ( more on instantiation & injection on beans)
+    
+    ----------------------------------------
+    
+    
+    
+    
+    
+    
