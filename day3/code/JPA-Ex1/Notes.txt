@@ -1,0 +1,38 @@
+
+
+
+  s.w product
+  ------------
+  
+  a. application
+  
+     -> Object model
+  
+  b.  datasource
+  
+     -> Relational Model
+     
+     
+     
+     
+     ORM ( Object Relational Mapping )
+     
+     f.w
+     
+     -> Hibernate
+     
+     
+ --------------------------------------
+ 
+ 
+ JPA - mapping
+ 
+ 
+ -> primitive(simple-types) mapping
+ -> complex-type mapping
+ 
+ 
+ 
+ 
+ 
+     

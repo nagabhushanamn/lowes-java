@@ -1,0 +1,71 @@
+
+
+
+  s.w product
+  ------------
+  
+  a. application
+  
+     -> Object model
+  
+  b.  datasource
+  
+     -> Relational Model
+     
+     
+     
+     
+     ORM ( Object Relational Mapping )
+     
+     f.w
+     
+     -> Hibernate
+     
+     
+ --------------------------------------
+ 
+ 
+ JPA - mapping
+ 
+ 
+ -> primitive(simple-types) mapping
+ -> complex-type mapping
+ 
+ ---------------------------------
+ 
+ -> entity+entity mapping  ( Entity Relationship )
+ 
+    
+    types
+    ------
+    
+    -> Uni-direactional
+    -> Bi-direactional
+    
+    associations
+    -------------
+    
+    -> 1-1
+    -> 1-M
+    -> M-1
+    -> M-M
+    
+    
+    in relational model:
+    
+    
+    --> Foreign-Key
+    --> Join-Table
+    
+    -----------------------------------------
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     
